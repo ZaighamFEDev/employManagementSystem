@@ -104,7 +104,7 @@ const CreateTask = () => {
   const [taskDate, setTaskDate] = useState("");
   const [taskCategory, setTaskCategory] = useState("");
   const [taskDesc, setTaskDesc] = useState("");
-  const [assignTo, setAssignTo] = useState("");
+  const [assignTo, setAssignTo] = useState("")
 
   const handleSubmit = (e) => {
     e.preventDefault();

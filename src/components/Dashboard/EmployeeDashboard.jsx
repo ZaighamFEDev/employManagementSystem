@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
 import Header from "../../Others/Header"
-import TaskListNumbers from "../../Others/tASKlISTnUMBERS.JSX"
+import TaskListNumbers from "../../Others/TaskListNumbers"
 import Tasklist from "../../TaskList/Tasklist"
 
 const EmployeeDashboard = ({data, changeUser}) => {

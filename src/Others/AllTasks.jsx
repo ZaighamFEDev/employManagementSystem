@@ -7,7 +7,6 @@ import { setLocalStorage } from "../utils/LocalStorage";
 
 const AllTasks = () => {
   const [userData, setUserData] = useContext(AuthContext);
-//   console.log("aaaaaaaaaaaaaaaa",AuthData)
 useEffect(() => {
  setLocalStorage()
 }, [userData])
@@ -22,6 +21,7 @@ useEffect(() => {
            <p className="text-xl w-1/5 ">Completed Tasks</p>
            <p className="text-xl w-1/5 ">Failed Tasks</p>
        </div>
+
     <div className="no-scrollbar flex flex-col gap-2 py-3 h-[190px] overflow-auto">
         {userData.employees.map((user, key)=>{
            return   <div key={key} className="flex items-center justify-between px-3 py-1 border-[1.5px] border-green-400 rounded-md">
@@ -30,7 +30,6 @@ useEffect(() => {
            <h2 className="text-lg w-1/5  text-yellow-500">{user.taskCounts.active}</h2>
            <h2 className="text-lg w-1/5  text-green-500">{user.taskCounts.completed}</h2>
            <h2 className="text-lg w-1/5  text-red-600">{user.taskCounts.failed}</h2>
-
        </div>
         })}
         
@@ -39,4 +38,4 @@ useEffect(() => {
   )
 }
 
-export default AllTasks
+export default AllTasks;

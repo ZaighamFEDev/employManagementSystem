@@ -1,18 +1,27 @@
 /* eslint-disable react/prop-types */
-/* eslint-disable no-unused-vars */
-import Header from "../../Others/Header"
-import TaskListNumbers from "../../Others/TaskListNumbers"
-import Tasklist from "../../TaskList/Tasklist"
+import Header from "../../Others/Header";
+import TaskListNumbers from "../../Others/TaskListNumbers";
+import Tasklist from "../../TaskList/Tasklist";
 
-const EmployeeDashboard = ({data, changeUser}) => {
-  // console.log("data",data)
+const EmployeeDashboard = ({ data, changeUser, updateTaskState }) => {
   return (
     <div className="h-screen bg-[#1C1C1C] px-10">
-    <Header data={data} changeUser={changeUser} />
-    <TaskListNumbers data={data}/>
-    <Tasklist data={data}/>
+      <Header data={data} changeUser={changeUser} />
+      <TaskListNumbers data={data} />
+      <Tasklist
+        data={data}
+        onAcceptTask={(taskId) =>
+          updateTaskState(taskId, { newTask: false, active: true, })
+        }
+        onCompleteTask={(taskId) =>
+          updateTaskState(taskId, { active: false, completed: true })
+        }
+        onFailTask={(taskId) =>
+          updateTaskState(taskId, { active: false, failed: true })
+        }
+      />
     </div>
-  )
-}
+  );
+};
 
-export default EmployeeDashboard
+export default EmployeeDashboard;

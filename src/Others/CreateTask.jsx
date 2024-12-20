@@ -85,6 +85,7 @@ console.log("userData",userData)
             onChange={(e) => setTaskDate(e.target.value)}
             className="border-[1.5px] border-zinc-300 bg-transparent text-sm outline-0 py-1 px-2 rounded-md"
             type="date" 
+            placeholder="Due Date"
         id="date" 
         name="date" 
         min={currentDate} 

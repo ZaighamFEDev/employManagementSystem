@@ -8,7 +8,7 @@ import CreateTask from "../../Others/CreateTask"
 const AdminDashboard = ({changeUser}) => {
 
   return (
-    <div className="px-10">
+    <div className="px-3 md:px-10">
         <Header changeUser={changeUser} />
         <CreateTask/>
         <AllTasks />

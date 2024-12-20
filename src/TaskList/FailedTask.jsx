@@ -2,7 +2,7 @@
 
 const FailedTask = ({data}) => {
   return (
-    <div className="h-full w-[280px] bg-red-800 rounded-2xl flex-shrink-0 p-5 relative">
+    <div className="h-full w-[280px] bg-red-800 rounded-2xl flex-shrink-0 p-3 md:p-5 relative">
     <div className="flex justify-between items-center">
       {data.category ? 
      <button className="py-1 px-3 bg-red-900 max-w-[150px] overflow-clip whitespace-nowrap text-ellipsis rounded-md">{data.category}</button>: null

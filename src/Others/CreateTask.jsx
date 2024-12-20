@@ -65,9 +65,9 @@ console.log("userData",userData)
   return (
     <form
       onSubmit={handleSubmit}
-      className="bg-[#1C1C1C] rounded-xl flex gap-20"
+      className="bg-[#1C1C1C] rounded-xl md:flex gap-20 pt-2 pb-3 md:pt-0 md:pb-0"
     >
-      <div className="w-1/2 flex flex-col gap-1 px-5 py-3">
+      <div className="md:w-1/2 flex flex-col gap-1 px-5 md:py-3">
         <div className="flex flex-col gap-[2px]">
           <p className="text-base text-zinc-300">Task Title</p>
           <input
@@ -112,9 +112,9 @@ console.log("userData",userData)
           />
         </div>
       </div>
-      <div className="w-1/2 px-5 py-3 flex flex-col justify-between">
+      <div className="md:w-1/2 px-5 py-1 md:py-3 flex flex-col justify-between">
         <div className="flex flex-col gap-[2px]">
-          <p className="text-base">Description</p>
+          <p className="text-base text-zinc-300">Description</p>
           <textarea
             value={taskDesc}
             onChange={(e) => setTaskDesc(e.target.value)}
@@ -122,7 +122,7 @@ console.log("userData",userData)
             rows={5}
           ></textarea>
         </div>
-        <button className="bg-green-400 w-full px-3 py-2 rounded-md">
+        <button className="bg-green-400 w-full mt-2 md:mt-0 px-3 py-2 rounded-md">
           Create Task
         </button>
       </div>
